@@ -1,0 +1,346 @@
+:root {
+    /* light*/
+    --body-bg-color: #FEBF10;
+    --bot-response-bg-color: #fff;
+    --bot-response-text-color: #000;
+    --bot-response-shadow: 20px 20px 60px #cecece, -20px -20px 60px #ffffff;
+    --user-response-bg-color: #FEBF10;
+    --user-response-shadow: 10px 11px 30px #a7a7a7, -20px -20px 60px #ffffff;
+    --bot-caption-text-color: rgb(24, 25, 25);
+    --content-chat-bg-color: #f2f2f2;
+    --container: #fff;
+    
+    /* Dark */
+    --body-bg-color: #FEBF10;
+    --bot-response-bg-color: #333333;
+    --bot-response-text-color: #fff;
+    --bot-response-shadow: 20px 20px 60px #181818, -20px -20px 60px #000000;
+    --user-response-shadow: 24px 11px 26px #1F1F20, 3px -6px 13px #000000;
+    --bot-caption-text-color: grey;
+    --content-chat-bg-color: #1c1c1c;
+    --container: #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./assets/marketing-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-bg-color)
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+body,
+button,
+input,
+select {
+    font-family: Source Sans Pro, sans-serif;
+}
+
+.bot-response {
+    background: var(--bot-response-bg-color) !important;
+    box-shadow: var(--bot-response-shadow);
+    font-size: 17px;
+    line-height: 24px;
+    border-radius: 20px;
+    word-wrap: break-word;
+    max-width: fit-content;
+    padding: 15px 17px;
+    color: var(--bot-response-text-color);
+    margin-top: 10px;
+}
+
+.text[text-first] {
+    border-bottom-left-radius: 5px;
+    margin-top: 0;
+}
+
+.text[text-middle] {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.text[text-last] {
+    border-top-left-radius: 5px;
+}
+
+.message[data-user="true"] {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.msgCaption {
+    padding: 0 25px 10px !important;
+    padding-top: 10px !important;
+}
+
+.user-response {
+    background: var(--user-response-bg-color) !important;
+    box-shadow: var(--user-response-shadow) !important;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    line-height: 24px;
+    border-radius: 20px;
+    max-width: 250px;
+    padding: 15px 17px;
+    border-bottom-right-radius: 5px;
+    word-break: break-all;
+    white-space: normal;
+}
+
+p {
+    margin: 0 !important;
+}
+
+.follow-up {
+    font-size: medium;
+    margin: 3px;
+}
+
+.message {
+    padding: 0 25px 0px;
+}
+
+.message img {
+    width: 100%;
+    height: 217px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 6px;
+}
+
+.captionBot img {
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+}
+
+.captionBot {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    width: 117px;
+    font-size: 14px;
+    color: var(--bot-caption-text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+.by a {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 3px;
+}
+
+.by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-top: 1px solid rgb(238, 238, 238);
+}
+
+.by span {
+    color: rgb(155, 166, 178);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.InputMSG {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 50px;
+    padding-left: 15px;
+    font-size: 1.1rem;
+    background: var(--bot-response-bg-color);
+    color: var(--bot-response-text-color)
+}
+
+.InputMSG::placeholder {
+    font-size: 1.1rem;
+    color: rgb(155, 166, 178);
+}
+
+.BoxSentMSG {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: var(--bot-response-bg-color);
+    color: var(--bot-response-text-color)
+}
+
+.send-icon {
+    display: flex;
+    background-color: white;
+    width: 26px;
+    height: 26px;
+    margin: 0 13px;
+    cursor: pointer;
+    background: var(--bot-response-bg-color);
+}
+
+.ContentChat {
+    background: var(--content-chat-bg-color) !important;
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.ContentChat::before {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 100%;
+}
+
+.ContentChat::after {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 100%;
+}
+
+.AvatarBot {
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.AvatarBot:after {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    background: rgb(105, 222, 64);
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+}
+
+.InfoBot {
+    margin-left: 17px;
+}
+
+#status {
+    color: rgb(155, 166, 179);
+}
+
+.TitleBot {
+    font-size: 24px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--bot-response-text-color);
+}
+
+.AvatarBot img {
+    width: 50px;
+    height: 50px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    padding-left: 13px;
+    -webkit-box-shadow: 0 9.5px 12.7px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 9.5px 12.7px 0 rgba(0, 0, 0, 0.05);
+}
+
+.container {
+    z-index: 99;
+    width: 400px;
+    height: 570px;
+    background-color: var(--container);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin: 50px auto;
+}
+
+.InputMSG:valid~.send-icon svg path {
+    fill: #0066ff;
+}
+
+.none {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        z-index: 99;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    body {
+        display: block;
+        height: calc(100vh - 170px);
+        overflow: auto;
+    }
+
+    .ContentChat {
+        height: 100%;
+        margin-top: 90px;
+        margin-bottom: 80px;
+        overflow: auto;
+    }
+
+    .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--container);
+        color: var(--bot-response-text-color);
+    }
+
+    .BoxSentMSG {
+        position: fixed;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        background: var(--bot-response-bg-color);
+        color: var(--bot-response-text-color)
+    }
+
+    .by {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+    }
+}
