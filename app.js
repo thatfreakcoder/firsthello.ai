@@ -75,7 +75,7 @@ async function SendMsgByBot(msg) {
 
   let elementCPT = document.createElement("div");
   elementCPT.classList.add("captionBot", "msgCaption");
-  elementCPT.innerHTML = '<img src="./assets/favicon.png" alt="YuviGPT"> <span>YuviGPT</span>';
+  elementCPT.innerHTML = '<img src="./assets/favicon.png" alt="logo"> <span>Get Catalyzed</span>';
   ContentChat.appendChild(elementCPT);
   elementCPT.scrollIntoView();
 
@@ -128,6 +128,12 @@ async function SendMsgByBot(msg) {
 
 
 document.addEventListener("DOMContentLoaded", async () => {
+// colored Console.log
+  console.log("%cFrontend Version: 0.0.1@23-03-2024", "color: #FEBF10; font-weight: bold;");
+  const ver = await fetch(apiUrl);
+  const verData = await ver.json();
+  console.log(`%cBackend Version: ${verData.version}`, "color: #FEBF10; font-weight: bold;");
+
   var isNew = localStorage.getItem("isNew");
   if (isNew === null) {
     localStorage.setItem("isNew", 1);
@@ -137,7 +143,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   let elementCPT = document.createElement("div");
   elementCPT.classList.add("captionBot", "msgCaption");
-  elementCPT.innerHTML = '<img src="./assets/favicon.png" alt="YuviGPT"> <span>YuviGPT</span>';
+  elementCPT.innerHTML = '<img src="./assets/favicon.png" alt="logo"> <span>Get Catalyzed</span>';
   ContentChat.appendChild(elementCPT);
   elementCPT.scrollIntoView();
 
