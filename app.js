@@ -75,7 +75,7 @@ async function SendMsgByBot(msg) {
 
   let elementCPT = document.createElement("div");
   elementCPT.classList.add("captionBot", "msgCaption");
-  elementCPT.innerHTML = '<img src="./assets/favicon.png" alt="logo"> <span>Get Catalyzed</span>';
+  elementCPT.innerHTML = '<img src="./assets/favicon.png" alt="logo"> <span>GC Bot</span>';
   ContentChat.appendChild(elementCPT);
   elementCPT.scrollIntoView();
 
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   let elementCPT = document.createElement("div");
   elementCPT.classList.add("captionBot", "msgCaption");
-  elementCPT.innerHTML = '<img src="./assets/favicon.png" alt="logo"> <span>Get Catalyzed</span>';
+  elementCPT.innerHTML = '<img src="./assets/favicon.png" alt="logo"> <span>GC Bot</span>';
   ContentChat.appendChild(elementCPT);
   elementCPT.scrollIntoView();
 
